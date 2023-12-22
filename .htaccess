@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# Redirect /index.php to /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [R=301,L]
+
+# Redirect /contact.php to /contact
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /contact\.php\ HTTP/
+RewriteRule ^contact\.php$ /contact [R=301,L]
+
+# Redirect /portfolio.php to /portfolio
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /portfolio\.php\ HTTP/
+RewriteRule ^portfolio\.php$ /portfolio [R=301,L]
+
+# Rewrite / to /index.php
+RewriteRule ^$ /index.php [L]
+
+# Rewrite /contact to /contact.php
+RewriteRule ^contact$ /contact.php [L]
+
+# Rewrite /portfolio to /portfolio.php
+RewriteRule ^portfolio$ /portfolio.php [L]
